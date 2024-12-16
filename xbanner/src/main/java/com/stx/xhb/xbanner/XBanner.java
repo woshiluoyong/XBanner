@@ -385,6 +385,13 @@ public class XBanner extends RelativeLayout implements XBannerViewPager.AutoPlay
         }
     }
 
+    public void updatePointTopBottomPaddingPx(int mPointTopBottomPadding) {
+        this.mPointTopBottomPadding = mPointTopBottomPadding;
+        /*更新内边距*/
+        pointContainerRl.setPadding(mPointContainerLeftRightPadding, this.mPointTopBottomPadding, mPointContainerLeftRightPadding, this.mPointTopBottomPadding);
+        initPoints();
+    }
+    
     private void initView() {
 
         /*设置指示器背景容器*/
